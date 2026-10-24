@@ -10,7 +10,7 @@ Author: Sergio Atanacio. License: MIT. The shop, products, sales and goals are e
 
 ## Quick start (no API key)
 
-Requires Node 20+ (developed and run on Node 24 / Windows 11).
+Requires Node 22+ (developed and run on Node 24 / Windows 11). Node 20 is not supported: `better-sqlite3` ships no prebuilt binary for it on Windows and the install falls back to a native compile.
 
 ```bash
 npm install
@@ -128,7 +128,7 @@ It writes `evals/reports/report-<timestamp>.md` and `.json` (git-ignored), and e
 
 `npm test` runs 35 `node:test` tests through `tsx`: rescue parser shapes, tool validation and the confirmation guard (self-confirm, wrong user, expiry, cancel), memory/usage/cache, the OpenAI client against a fake `fetch`, the agent loop (turn cap, fallback, rescue, propose/confirm), the HTTP server (NDJSON events, auth, validation, 413, cache, daily limit, memory across requests), and the scorer plus golden-set sanity.
 
-CI (`.github/workflows/ci.yml`) runs typecheck, tests and the mock evals on Ubuntu and Windows with Node 20 and 22.
+CI (`.github/workflows/ci.yml`) runs typecheck, tests and the mock evals on Ubuntu and Windows with Node 22 and 24.
 
 ## Verification status
 
