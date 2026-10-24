@@ -134,7 +134,9 @@ CI (`.github/workflows/ci.yml`) runs typecheck, tests and the mock evals on Ubun
 
 Verified locally on Windows 11 with Node 24.14: clean `npm ci`, typecheck, 35/35 tests, mock evals (default, `mock-text-1` rescue mode and `mock-fail-1` fallback mode all 32/32), and the real server queried with `curl` (read question, propose, confirm, fallback event).
 
-**Not verified:** any live provider (no API key was used, no paid calls made); Node 20 and 22 and Linux (the CI workflow is written but has never run on GitHub); behavior under concurrent load.
+**Verified:** typecheck, tests and the mock evals pass in CI on Ubuntu and Windows with Node 22 and 24.
+
+**Not verified:** any live provider (no API key was used, no paid calls made); Node 20 (unsupported, see above); behavior under concurrent load.
 
 ## Limitations
 
